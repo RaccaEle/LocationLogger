@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Status"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewPriorityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRIORITY:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioNoPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Power" />
+
+        <RadioButton
+            android:id="@+id/radioLowPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Power" />
+
+        <RadioButton
+            android:id="@+id/radioBalanced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Balanced Power Accuracy"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioHighAccuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Accuracy" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewAccuracyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACCURACY:"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Switch
+        android:id="@+id/switchAccuracy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location Accuracy"
+        android:checked="true"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/buttonStartLogging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Logging" />
+
+    <Button
+        android:id="@+id/buttonStopLogging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Logging"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewResults"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textViewResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</LinearLayout>
